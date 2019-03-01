@@ -11,4 +11,4 @@ None
 
 ### Get My Profile
 
-The Get My Profile action collects infomration related to the current user.
+The Get My Profile action collects information related to the current user.
