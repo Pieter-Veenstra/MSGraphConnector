@@ -3,12 +3,12 @@ MS Graph Connector for Microsoft Flow
 
 This is an initial release for a Custom Graph connector for Microsoft Flow.
 
-##Available Triggers
+## Available Triggers
 
 None
 
-##Available Actions
+## Available Actions
 
-###Get My Profile
+### Get My Profile
 
 The Get My Profile action collects infomration related to the current user.
