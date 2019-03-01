@@ -1,5 +1,5 @@
 # MSGraphConnector
-![Graph Logo](https://cdn.graph.office.net/prod/GraphDocuments/en-us/concepts/images/microsoft_graph.png)
+
 MS Graph Connector for Microsoft Flow
 
 This is an initial release for a Custom Graph connector for Microsoft Flow.
