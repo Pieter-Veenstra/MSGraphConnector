@@ -1,4 +1,4 @@
-![Graph Logo](/images/microsoft_graph.png)
+![Graph Logo](/microsoft_graph.png)
 # MSGraphConnector
 
 MS Graph Connector for Microsoft Flow
