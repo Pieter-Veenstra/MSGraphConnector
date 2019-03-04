@@ -14,3 +14,15 @@ None
 ### Get My Profile
 
 The Get My Profile action collects information related to the current user.
+
+### Get Site ID
+
+Get the Site identifier used by other actions
+
+### Get lists from SharePoint site
+
+Get all the lists and libraries from a specifid site using the Site ID
+ 
+### Read an Excel file
+
+Specifiy which data range you want to read and the data is returned.
