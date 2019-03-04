@@ -1,9 +1,9 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Graph Connector",
-    "description": "Graph connector",
-    "version": "1.0"
+    "title": "MS Graph Connector",
+    "description": "MS Graph connector",
+    "version": "1.1"
   },
   "host": "graph.microsoft.com",
   "basePath": "/",
@@ -12,7 +12,7 @@
   ],
   "consumes": [],
   "produces": [],
-  "paths": {    
+  "paths": {
     "/v1.0/me": {
       "get": {
         "responses": {
@@ -34,6 +34,129 @@
             "type": "string",
             "default": "application/json",
             "x-ms-visibility": "internal"
+          }
+        ]
+      }
+    },
+    "/v1.0/sites/{Tenant}.sharepoint.com:/sites/{Site}/": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "summary": "Get Site ID",
+        "description": "Connect to a SharePoint site",
+        "operationId": "GetSiteID",
+        "parameters": [
+          {
+            "name": "Tenant",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "default": "tenant.sharepoint.com",
+            "description": "The tenant url of your SharePoint site, e.g. tenant.sharepoint.com",
+            "x-ms-summary": "The tenant url of your SharePoint site, e.g. tenant.sharepoint.com"
+          },
+          {
+            "name": "Site",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "default": "MySite",
+            "description": "Your site. https://mycompany.sharepoint.com/sites/ThisPartOnly",
+            "x-ms-summary": "Your site. https://mycompany.sharepoint.com/sites/ThisPartOnly"
+          }
+        ]
+      }
+    },
+    "/v1.0/sites/{SiteID}/lists": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "summary": "Get Lists in Site",
+        "description": "Get Lists in site",
+        "operationId": "GetListsInSP",
+        "parameters": [
+          {
+            "name": "SiteID",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "default": "",
+            "description": "Site ID",
+            "x-ms-summary": "Site ID"
+          }
+        ]
+      }
+    },
+    "/v1.0/sites/{SiteID}/lists/{DocumentLibrary}/drive/root:/{FileName}:/workbook/worksheets('{SheetName}')/range(address='{Range}')": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "summary": "Read Excel file from SharePoint Library",
+        "description": "Read Excel file from SharePoint Library",
+        "operationId": "ReadExcelFileFromLibrary2",
+        "parameters": [
+          {
+            "name": "SiteID",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "default": "",
+            "description": "Site ID",
+            "x-ms-summary": "Site ID"
+          },
+          {
+            "name": "DocumentLibrary",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "default": "MySite",
+            "description": "Library. https://mycompany.sharepoint.com/sites/MySite/ThisPartOnly",
+            "x-ms-summary": "Library. https://mycompany.sharepoint.com/sites/MySite/ThisPartOnly"
+          },
+          {
+            "name": "FileName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "default": "Myfile.xlsx",
+            "description": "filename",
+            "x-ms-summary": "Filename"
+          },
+          {
+            "name": "SheetName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "default": "SheetName",
+            "description": "Name of the sheet",
+            "x-ms-summary": "Name of the sheet"
+          },
+          {
+            "name": "Range",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "default": "A1:J10",
+            "description": "Range",
+            "x-ms-summary": "Range"
           }
         ]
       }
