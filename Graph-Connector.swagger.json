@@ -3,7 +3,7 @@
   "info": {
     "title": "MS Graph Connector",
     "description": "MS Graph connector",
-    "version": "1.1"
+    "version": "1.2"
   },
   "host": "graph.microsoft.com",
   "basePath": "/",
@@ -160,6 +160,149 @@
           }
         ]
       }
+    },
+    "/v1.0/groups": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "id"
+                      },
+                      "deletedDateTime": {
+                        "type": "string",
+                        "description": "deletedDateTime"
+                      },
+                      "classification": {
+                        "type": "string",
+                        "description": "classification"
+                      },
+                      "createdDateTime": {
+                        "type": "string",
+                        "description": "createdDateTime"
+                      },
+                      "creationOptions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "creationOptions"
+                      },
+                      "description": {
+                        "type": "string",
+                        "description": "description"
+                      },
+                      "displayName": {
+                        "type": "string",
+                        "description": "displayName"
+                      },
+                      "groupTypes": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "groupTypes"
+                      },
+                      "mail": {
+                        "type": "string",
+                        "description": "mail"
+                      },
+                      "mailEnabled": {
+                        "type": "boolean",
+                        "description": "mailEnabled"
+                      },
+                      "mailNickname": {
+                        "type": "string",
+                        "description": "mailNickname"
+                      },
+                      "onPremisesLastSyncDateTime": {
+                        "type": "string",
+                        "description": "onPremisesLastSyncDateTime"
+                      },
+                      "onPremisesSecurityIdentifier": {
+                        "type": "string",
+                        "description": "onPremisesSecurityIdentifier"
+                      },
+                      "onPremisesSyncEnabled": {
+                        "type": "string",
+                        "description": "onPremisesSyncEnabled"
+                      },
+                      "preferredDataLocation": {
+                        "type": "string",
+                        "description": "preferredDataLocation"
+                      },
+                      "proxyAddresses": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "proxyAddresses"
+                      },
+                      "renewedDateTime": {
+                        "type": "string",
+                        "description": "renewedDateTime"
+                      },
+                      "resourceBehaviorOptions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "resourceBehaviorOptions"
+                      },
+                      "resourceProvisioningOptions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "resourceProvisioningOptions"
+                      },
+                      "securityEnabled": {
+                        "type": "boolean",
+                        "description": "securityEnabled"
+                      },
+                      "visibility": {
+                        "type": "string",
+                        "description": "visibility"
+                      },
+                      "onPremisesProvisioningErrors": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "onPremisesProvisioningErrors"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            },
+            "headers": {
+              "Content-type": {
+                "description": "Content-type",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "operationId": "ListGroups",
+        "parameters": [],
+        "summary": "List groups",
+        "description": "List all the groups available in an organization, including but not limited to Office 365 Groups."
+      }
     }
   },
   "definitions": {},
@@ -172,14 +315,14 @@
       "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
       "tokenUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
       "scopes": {
-        "People.Read.All": "People.Read.All"
+        "People.Read.All Group.Read.All": "People.Read.All Group.Read.All"
       }
     }
   },
   "security": [
     {
       "oauth2_auth": [
-        "People.Read.All"
+        "People.Read.All Group.Read.All"
       ]
     }
   ],
