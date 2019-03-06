@@ -30,3 +30,7 @@ Get all the lists and libraries from a specifid site using the Site ID
 ### Read an Excel file
 
 Specifiy which data range you want to read and the data is returned.
+
+### List Groups
+
+List all the groups available in an organization, including but not limited to Office 365 Groups.
