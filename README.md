@@ -6,7 +6,7 @@ MS Graph Connector for Microsoft Flow
 This is an initial release for a Custom Graph connector for Microsoft Flow.
 
 See also
-https://veenstra.me.uk/2019/03/04/microsoft-flow-custom-connectors-how-to-read-an-excel-file-from-sharepoint/
+[[](Microsoft Flow – Custom Connectors – How to read an Excel file from)](https://sharepains.com/2019/03/04/microsoft-flow-custom-connectors-how-to-read-an-excel-file-from-sharepoint/)
 
 
 ## Available Triggers
